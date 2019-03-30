@@ -129,7 +129,9 @@ class GrabAssets extends AbstractPicoPlugin
         }
 
         //----- set twig variables that we just created
+        sort($all_assets);
         $twigVariables['array_of_assets'] = $all_assets;
+        sort($selected_files);
         $twigVariables['selected_assets'] = $selected_files;
     }
 }
