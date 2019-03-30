@@ -85,7 +85,7 @@ class GrabAssets extends AbstractPicoPlugin
 
         //----- see if our assets configuration variable exists
         //----- if it doesn't exist, return early
-        if (!array_key_exists('assets_dir')) {
+        if (!array_key_exists('assets_dir', $twigMeta)) {
             $twigVariables['nested_assets'] = [];
             $twigVariables['selected_assets'] = [];
             return;    
