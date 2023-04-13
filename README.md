@@ -58,3 +58,8 @@ Instead of being an array of ALL our images, it goes to the directory `assets/20
 ### Wait, This Looks Like I Could Implement a Lightbox...
 
 Yes, that is exactly what it was designed for and it comes at a low-low price of free.
+
+### What versions does it run on?
+
+* PicoCMS 3 Alpha-2
+* PHP 8.2
