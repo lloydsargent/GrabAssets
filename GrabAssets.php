@@ -42,6 +42,9 @@ class GrabAssets extends AbstractPicoPlugin
      * @return void
      */
     protected function onCurrentPageDiscovered(array &$currentPage = null, array &$previousPage = null, array &$nextPage = null) {
+        if ($currentPage == null) {
+            return;
+        }
         $base_url = $this->getConfig('base_url');
         $this->currentPagePath = str_replace(array('?', $base_url), '', urldecode($currentPage['url']));
     }
