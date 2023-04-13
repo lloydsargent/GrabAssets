@@ -95,12 +95,17 @@ class GrabAssets extends AbstractPicoPlugin
         $selectedAssetDirectory = '/deadbeef/beefdead/deadbeef';        
         if (array_key_exists('selected_assets', $twigMeta)) {
             $selectedAssetDirectory = $twigMeta['selected_assets'];
+        } else {
+            return;
         }
 
         //----- create our assets directory
         $base_dir = $twigVariables['base_dir'];
         $base_dir .= '/';
-        $assets_dir = $base_dir.$twigConfig['assets_dir'];
+
+        $assets_dir = $twigVariables['base_dir'];
+        $assets_dir .= '/';
+        $assets_dir .= $selectedAssetDirectory;
 
         //----- get our supported images
         $supported_assets = $twigConfig['supported_assets'];
